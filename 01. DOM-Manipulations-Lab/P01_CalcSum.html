@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+    </head>
+    <body>
+    <form>
+        <input type="text" id="num1" /> +
+        <input type="text" id="num2" /> =
+        <input type="text" id="sum" readonly="readonly" />
+        <input type="button" value="Calc" id="calc" onclic="calc()"/>
+    </form>
+    <script>
+        document.getElementById('calc').addEventListener('click', calculate);
+
+        function calculate(){
+            let first = document.getElementById('num1').value;
+            let second = document.getElementById('num2').value;
+            document.getElementById('sum').value = +first + +second;
+        }
+    </script>
+    </body>
+</html>
