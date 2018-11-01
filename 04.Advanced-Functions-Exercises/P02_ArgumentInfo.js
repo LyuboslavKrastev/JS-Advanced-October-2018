@@ -1,0 +1,28 @@
+function argumentInfo(){
+    let typeCount = new Map();
+
+    for (let argument of arguments) {
+        let type = typeof argument;
+
+        if(!typeCount.has(type)){
+            typeCount.set(type, 0);
+        } 
+
+        let oldValue = typeCount.get(type);
+
+        typeCount.set(type, oldValue + 1);
+
+        console.log(`${type}: ${argument}`);
+
+    }
+
+    let result = Array.from(typeCount).sort((a, b) => 
+        b[1] - a[1]
+    );
+
+    for(let type of result){
+        console.log(`${type[0]} = ${type[1]}`);
+    }
+}
+
+argumentInfo('cat', 42, 52, function () { console.log('Hello world!'); });
