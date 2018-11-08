@@ -26,14 +26,3 @@ class SortedList{
     }
 }
 
-let classut = new SortedList();
-classut.add(3);
-classut.add(5);
-classut.add(4);
-classut.add(1);
-classut.add(2);
-console.log(classut);
-classut.remove(2);
-console.log(classut);
-
-
