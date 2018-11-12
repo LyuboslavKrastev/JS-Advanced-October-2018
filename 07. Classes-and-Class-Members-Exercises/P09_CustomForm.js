@@ -43,6 +43,7 @@ let result = (function (){
         constructor(){
             this._element = $('<div>')
                 .addClass('form');
+            //The constructor should be able to take different amount of Textbox objects
             this.textboxes = arguments;
         }
 
