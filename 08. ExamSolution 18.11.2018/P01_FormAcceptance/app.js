@@ -19,25 +19,25 @@ function acceptance() {
 		let scrape = +productScrape;
 		let realQuantity = quantity - scrape;
 		if(realQuantity > 0){
-				let warehouse = $('#warehouse');
-				let outOfStockButton = $('<button type="button">Out of stock</button>');
-				outOfStockButton.on('click', (event) => {
-					event.target.parentNode.remove();
-				});
-				let div = $('<div>');
+			let warehouse = $('#warehouse');
+			let outOfStockButton = $('<button type="button">Out of stock</button>');
+			outOfStockButton.on('click', (event) => {
+				event.target.parentNode.remove();
+			});
+			let div = $('<div>');
 				
-				let p = $('<p>')
-					.text(`[${companyName}] ${productName} - ${realQuantity} pieces`);
+			let p = $('<p>')
+				.text(`[${companyName}] ${productName} - ${realQuantity} pieces`);
 
-				div.append(p);
-				div.append(outOfStockButton);
-				warehouse.append(div);
+			div.append(p);
+			div.append(outOfStockButton);
+			warehouse.append(div);
 
-				// reset input fields
-				$('input[name="shippingCompany"]').val('');
-				$('input[name="productName"]').val('');
-				$('input[name="productQuantity"]').val('');
-				$('input[name="productScrape"]').val('');
+			// reset input fields
+			$('input[name="shippingCompany"]').val('');
+			$('input[name="productName"]').val('');
+			$('input[name="productQuantity"]').val('');
+			$('input[name="productScrape"]').val('');
 		}				
 	}
 }
