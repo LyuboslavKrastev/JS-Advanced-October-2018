@@ -37,6 +37,7 @@ function acceptance() {
 				$('input[name="shippingCompany"]').val('');
 				$('input[name="productName"]').val('');
 				$('input[name="productQuantity"]').val('');
+				$('input[name="productScrape"]').val('');
 		}				
 	}
 }
